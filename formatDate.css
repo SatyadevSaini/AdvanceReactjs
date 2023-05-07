@@ -7,9 +7,8 @@
     border-radius: 10%;
     background-color: rgb(56, 8, 228);
     color: aliceblue;
-    padding: 0px;
-    padding-left: auto;
+    padding-left: 10px;
     padding-right: auto;
     width: 100px;
-    margin: 0px;
+    margin-left:10px;
 }
