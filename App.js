@@ -4,57 +4,62 @@ import Expence from "./Component/Expence/ExpenceITEM";
 import Card from "./Component/Expence/Card";
 
 
+
+const data = [
+  {
+    id:1,
+    date: new Date(2021, 3, 23),
+    title: "insurance here",
+    price: 450,
+  },
+  {
+    id:2,
+    date: new Date(2021, 5, 23),
+    title: "ksjk here",
+    price: 4560,
+  },
+  {
+    id:3,
+    date: new Date(2021, 9, 23),
+    title: "hweujiol here",
+    price: 4506,
+  },
+  {
+    id:4,
+    date: new Date(2021, 7, 23),
+    title: "sjkjksjkjik here",
+    price: 45880,
+  },
+  {
+    id:5,
+    date: new Date(2021, 12, 23),
+    title: "tututijhjs here",
+    price: 99450,
+  },
+  {
+    id:6,
+    date: new Date(2021, 1, 8),
+    title: "tututijhjs here",
+    price: 99450,
+  },
+  {
+    id:7,
+    date: new Date(2021, 4, 13),
+    title: "tututijhjs here",
+    price: 99450,
+  },
+  {
+    id:8,
+    date: new Date(2021, 2, 3),
+    title: "tututijhjs here",
+    price: 99450,
+  },
+];
+
+
+
 const  App = () => {
-  const data = [
-    {
-      id:1,
-      date: new Date(2021, 3, 23),
-      title: "insurance here",
-      price: 450,
-    },
-    {
-      id:2,
-      date: new Date(2021, 5, 23),
-      title: "ksjk here",
-      price: 4560,
-    },
-    {
-      id:3,
-      date: new Date(2021, 9, 23),
-      title: "hweujiol here",
-      price: 4506,
-    },
-    {
-      id:4,
-      date: new Date(2021, 7, 23),
-      title: "sjkjksjkjik here",
-      price: 45880,
-    },
-    {
-      id:5,
-      date: new Date(2021, 12, 23),
-      title: "tututijhjs here",
-      price: 99450,
-    },
-    {
-      id:6,
-      date: new Date(2021, 1, 8),
-      title: "tututijhjs here",
-      price: 99450,
-    },
-    {
-      id:7,
-      date: new Date(2021, 4, 13),
-      title: "tututijhjs here",
-      price: 99450,
-    },
-    {
-      id:8,
-      date: new Date(2021, 2, 3),
-      title: "tututijhjs here",
-      price: 99450,
-    },
-  ];
+ 
 
   
 
