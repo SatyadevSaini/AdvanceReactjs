@@ -1,11 +1,12 @@
 //import logo from "./logo.svg";
 import "./App.css";
 import Expence from "./Component/Expence/ExpenceITEM";
-import Card from "./Component/Expence/Card";
+
+import MyForm from "./Component/ExpenseForm";
 
 
 
-const data = [
+ export const data = [
   {
     id:1,
     date: new Date(2021, 3, 23),
@@ -59,23 +60,21 @@ const data = [
 
 
 const  App = () => {
- 
-
-  
 
   // *********IMPORTANT *********************
 
   // it will remove the element from the array where id=2 
   // const  newArray  =  data.filter(obj => obj.id !== 2);
   // console.log(newArray);
-  
-
-
 
   return (
-    <Card>
-      {data.map((item) => (
-        <div>
+     
+    <div>
+     
+     <MyForm/>
+
+      {data.map((item , index) => (
+        <div key={index}>
           <Expence
             date={item.date}
             title={item.title}
@@ -105,8 +104,9 @@ const  App = () => {
       // <Expence date={data[4].date} title={data[4].title} price={data[4].price}>
       
       // </Expence> */}
-    </Card>
+    </div>
   );
 }
 
 export default App;
+
