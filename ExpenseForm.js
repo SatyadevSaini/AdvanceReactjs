@@ -7,9 +7,6 @@ import "./ExpenceForm.css";
 
 const MyForm = () =>{
 
-    const getIdHere = (event) =>{
-        console.log("ID   "+ event.target.value);
-    }
 
     const  getTitleHere = (event) =>{
         console.log( "TITLE  "+event.target.value);
@@ -30,9 +27,7 @@ const MyForm = () =>{
         <form>
 
         <div className="id_title">
-        <div>
-       <label> ID: <input className="heighttext" type="number" onChange={getIdHere}  ></input></label>
-       </div> 
+    
        <div>
        <label> TITLE: <input  className="heighttext"  type="text" onChange={getTitleHere}></input></label>
        </div>   
