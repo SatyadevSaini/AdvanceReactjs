@@ -3,21 +3,29 @@
 import React from "react";
 //import DateFormat from "./Expence/DateFormat";
 import "./ExpenceForm.css";
+import { useState } from "react";
 
 
 const MyForm = () =>{
+    // manage the Multiple useState here ..
+
+
+    const[setTitleHere , setUpdatedTitile] = useState(" ");
+    const[setpriceHere , setUpdatedPrice] = useState(" ");
+    const[setDateHere , setUpdatedDate] = useState(" ");
+
 
 
     const  getTitleHere = (event) =>{
-        console.log( "TITLE  "+event.target.value);
+        setUpdatedTitile(event.target.value);
     }
 
     const  getPriceHere = (event) =>{
-        console.log( "PRICE  "+event.target.value);
+        setUpdatedPrice(event.target.value);
     }
 
     const  getDateHere = (event) =>{
-        console.log( "DATE  "+event.target.value);
+        setUpdatedDate(event.target.value);
     }
 
     return(
