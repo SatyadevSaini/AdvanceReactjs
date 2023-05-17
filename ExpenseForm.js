@@ -10,43 +10,43 @@ const MyForm = () =>{
 
     // manage the Multiple useState here ..
 
-    const[setTitleHere , setUpdatedTitile] = useState(" ");
-    const[setpriceHere , setUpdatedPrice] = useState(" ");
-    const[setDateHere , setUpdatedDate] = useState(" ");
+    // const[setTitleHere , setUpdatedTitile] = useState(" ");
+    // const[setpriceHere , setUpdatedPrice] = useState(" ");
+    // const[setDateHere , setUpdatedDate] = useState(" ");
 
     // now Do It with only one State using the Object here .....
     
-    // const[setDataHere , setUpdatedData] = useState(
-    //     {
-    //         Entertitle:"" , 
-    //         Enterprice:"",
-    //         Enterdate:""
+    const[setDataHere , setUpdatedData] = useState(
+        {
+            Entertitle:"" , 
+            Enterprice:"",
+            Enterdate:""
 
-    //     }
-    // );
+        }
+    );
 
     
 
 
     const  getTitleHere = (event) =>{
-         setUpdatedTitile(event.target.value);
-        // setUpdatedData( (prevValue) => {
-        //   return{ ...prevValue , Entertitle:event.target.value}   
-        // });
+        //  setUpdatedTitile(event.target.value);
+        setUpdatedData( (prevValue) => {
+          return{ ...prevValue , Entertitle:event.target.value}   
+        });
     }
 
     const  getPriceHere = (event) =>{
-        setUpdatedPrice(event.target.value);
-        // setUpdatedData( (prevValue) => {
-        //     return{ ...prevValue , Enterprice:event.target.value}   
-        //   });
+        // setUpdatedPrice(event.target.value);
+        setUpdatedData( (prevValue) => {
+            return{ ...prevValue , Enterprice:event.target.value}   
+          });
     }
 
     const  getDateHere = (event) =>{
-        setUpdatedDate(event.target.value);
-        // setUpdatedData( (prevValue) => {
-        //     return{ ...prevValue , Enterdate:event.target.value}   
-        //   });
+        // setUpdatedDate(event.target.value);
+        setUpdatedData( (prevValue) => {
+            return{ ...prevValue , Enterdate:event.target.value}   
+          });
     }
 
     //Form Submit Hnadler here .
@@ -55,17 +55,16 @@ const MyForm = () =>{
 
    const expenceData =  
     {
-        prices : setTitleHere,
-        titles : setpriceHere,
-        dates : new Date(setDateHere)
+        prices : setDataHere.Enterprice,
+        titles : setDataHere.Entertitle,
+        dates : new Date(setDataHere.Enterdate)
+
        };
 
        console.log(expenceData);
 
     };
-
-
-
+    
     return(
          
         <div className="formdiv">
