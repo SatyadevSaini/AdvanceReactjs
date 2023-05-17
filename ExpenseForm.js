@@ -10,50 +10,67 @@ const MyForm = () =>{
 
     // manage the Multiple useState here ..
 
-    // const[setTitleHere , setUpdatedTitile] = useState(" ");
-    // const[setpriceHere , setUpdatedPrice] = useState(" ");
-    // const[setDateHere , setUpdatedDate] = useState(" ");
+    const[setTitleHere , setUpdatedTitile] = useState(" ");
+    const[setpriceHere , setUpdatedPrice] = useState(" ");
+    const[setDateHere , setUpdatedDate] = useState(" ");
 
     // now Do It with only one State using the Object here .....
     
-    const[setDataHere , setUpdatedData] = useState(
-        {
-            title:"" , 
-            price:"",
-            date:""
+    // const[setDataHere , setUpdatedData] = useState(
+    //     {
+    //         Entertitle:"" , 
+    //         Enterprice:"",
+    //         Enterdate:""
 
-        }
-    );
+    //     }
+    // );
 
     
 
 
     const  getTitleHere = (event) =>{
-        // setUpdatedTitile(event.target.value);
-        setUpdatedData( (prevValue) => {
-          return{ ...prevValue , title:event.target.value}   
-        });
+         setUpdatedTitile(event.target.value);
+        // setUpdatedData( (prevValue) => {
+        //   return{ ...prevValue , Entertitle:event.target.value}   
+        // });
     }
 
     const  getPriceHere = (event) =>{
-        // setUpdatedPrice(event.target.value);
-        setUpdatedData( (prevValue) => {
-            return{ ...prevValue , price:event.target.value}   
-          });
+        setUpdatedPrice(event.target.value);
+        // setUpdatedData( (prevValue) => {
+        //     return{ ...prevValue , Enterprice:event.target.value}   
+        //   });
     }
 
     const  getDateHere = (event) =>{
-        // setUpdatedDate(event.target.value);
-        setUpdatedData( (prevValue) => {
-            return{ ...prevValue , date:event.target.value}   
-          });
+        setUpdatedDate(event.target.value);
+        // setUpdatedData( (prevValue) => {
+        //     return{ ...prevValue , Enterdate:event.target.value}   
+        //   });
     }
+
+    //Form Submit Hnadler here .
+    const SubmitFormHandler = (event) => {
+       event.preventDefault();
+
+   const expenceData =  
+    {
+        prices : setTitleHere,
+        titles : setpriceHere,
+        dates : new Date(setDateHere)
+       };
+
+       console.log(expenceData);
+
+    };
+
+
 
     return(
          
         <div className="formdiv">
        <div className="title"> <h1>Expence Form</h1></div> 
-        <form>
+        <form onSubmit={SubmitFormHandler}>
 
         <div className="id_title">
     
