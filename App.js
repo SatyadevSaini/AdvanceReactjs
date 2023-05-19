@@ -1,10 +1,7 @@
 //import logo from "./logo.svg";
 import "./App.css";
 import Expence from "./Component/Expence/ExpenceITEM";
-
-import MyForm from "./Component/ExpenseForm";
-
-
+import NewExpenceHere from "./Component/Expence/NewExpence";
 
  export const data = [
   {
@@ -57,8 +54,6 @@ import MyForm from "./Component/ExpenseForm";
   },
 ];
 
-
-
 const  App = () => {
 
   // *********IMPORTANT *********************
@@ -67,11 +62,24 @@ const  App = () => {
   // const  newArray  =  data.filter(obj => obj.id !== 2);
   // console.log(newArray);
 
+   const functionForPrintingNewExpence = (data) => {
+        
+    console.log('Data Print On App.js');
+    console.log(data);
+
+   }
+
+    //working properrly we are able to send details able to interchange details..
+   const printMyDetails = (details) => {
+     console.log(details);
+   }
+
   return (
      
     <div>
-     
-     <MyForm/>
+     <NewExpenceHere  gotoAppDotJS = {functionForPrintingNewExpence}
+      sendMyDetails = {printMyDetails}
+     />
 
       {data.map((item , index) => (
         <div key={index}>
