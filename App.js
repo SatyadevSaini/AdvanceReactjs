@@ -1,9 +1,10 @@
 //import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 import Expence from "./Component/Expence/ExpenceITEM";
 import NewExpenceHere from "./Component/Expence/NewExpence";
 
- export const data = [
+  const datas = [
   {
     id:1,
     date: new Date(2021, 3, 23),
@@ -49,7 +50,13 @@ import NewExpenceHere from "./Component/Expence/NewExpence";
   {
     id:8,
     date: new Date(2021, 2, 3),
-    title: "tututijhjs here",
+    title: "Satya here",
+    price: 99450,
+  },
+  {
+    id:8,
+    date: new Date(2021, 2, 3),
+    title: "Satya here",
     price: 99450,
   },
 ];
@@ -62,12 +69,23 @@ const  App = () => {
   // const  newArray  =  data.filter(obj => obj.id !== 2);
   // console.log(newArray);
 
-   const functionForPrintingNewExpence = (data) => {
-        
-    console.log('Data Print On App.js');
-    console.log(data);
+  //***************** Will use State to  Add the item in the list **********************
 
-   }
+   const [old , newExpenceAdded]  = useState(datas);
+   
+   const functionForPrintingNewExpence = (data) => {
+       
+        console.log("App.js"  )
+        console.log(data);
+        console.log(datas)
+
+      //  datas.push(data);
+
+    newExpenceAdded( (prevExpence) => {
+      return [data , ...prevExpence];
+    }  );
+
+   };
 
     //working properrly we are able to send details able to interchange details..
    const printMyDetails = (details) => {
@@ -81,18 +99,19 @@ const  App = () => {
       sendMyDetails = {printMyDetails}
      />
 
-      {data.map((item , index) => (
-        <div key={index}>
+      {/* {datas.map((item , index) => (
+        <div key={index}> */}
           <Expence
-            date={item.date}
-            title={item.title}
-            price={item.price}
-            id={item.id}
+          item = {old}
+            // date={item.date}
+            // title={item.title}
+            // price={item.price}
+            // id={item.id}
           ></Expence>
-        </div>
-      ))}
-
-
+        {/* </div> */}
+       {/* ))}
+          */}
+             
       {/* // <Expence date={data[0].date} title={data[0].title} price={data[0].price}>
      
       // </Expence>
