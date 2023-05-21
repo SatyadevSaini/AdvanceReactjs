@@ -1,0 +1,63 @@
+
+
+.formdiv{
+    height: 85vh ;
+    width: 55vw ;
+    background-color: rgb(176, 233, 233);
+    margin-left: 22vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    border: solid 0.5px rgb(22, 21, 21);
+    border-radius: 25px;
+    margin-bottom: 5vh;
+
+}
+
+.title{
+    padding-top: 0.3vh;
+    text-align: center;
+    height: 20vh;
+
+    border: solid 0.5px rgb(52, 2, 2);
+    border-radius: 25px;
+    
+    color: rgb(254, 86, 8);
+    text-shadow: 0.5vh 0.5vh rgb(133, 121, 121);
+    
+    background-color: rgb(239, 209, 198);
+}
+
+.heighttext{
+     
+    display: inline-flex;
+    height: 6vh;
+    width: 95%;
+    font-size: 1.9rem;
+    border-radius: 10px;
+  
+}
+
+.id_title{
+    padding-top: 1rem;
+    padding-left: 1%;
+}
+.price_date{
+    padding-left: 1%;
+}
+
+.button{
+
+    text-align: center;
+    font-size: 2vw;
+    height: 6vh;
+    width: 15vw ;
+    background-color: rgb(207, 238, 159);
+   
+    
+    box-shadow: 2px 2px rgb(198, 240, 134);
+}
+
+.btn{
+    margin-top: 2vh;
+    text-align: center;
+}

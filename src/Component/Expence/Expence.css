@@ -1,0 +1,72 @@
+.mainClass {
+  text-align: center;
+}
+
+.expence-item {
+  width:90%;
+  display: inline-flex;
+  border: solid;
+  border-radius: 30px;
+  border-color: black;
+  margin:auto ;
+  padding-left:0.5vw;
+  background-color: rgb(229, 219, 206);
+  font-size: 40px}
+
+.expence-item__description {
+  text-align: center;
+  display: inline-flex;
+  padding-left: 4vw;
+  padding-right: auto;
+  font-weight: 900;
+  color: rgb(169, 18, 18);
+}
+
+.expence-item__price {
+  margin-top: 25px;
+  display: inline-flex;
+  width: auto;
+  font-weight: bold;
+  border: solid;
+  border-radius: 30px;
+  border-color: rgb(12, 11, 11);
+  text-align: center;
+  padding: 4vw;
+  margin-right: auto;
+  background-color: #e88c0a;
+  font-size: 25px;
+  height: 35px;
+}
+
+.changeTitle {
+  background-color: rgb(200, 202, 192);
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+
+
+@media screen  {
+
+  .expence-item{
+    height: max-content;
+    min-width: fit-content;
+    max-width: 900px; 
+    margin: auto;
+
+  }
+
+  .expence-item__price {
+    height: fit-content;
+    width: fit-content;
+    padding: 1cqw;
+  }
+  
+  .changeTitle {
+     height: fit-content;
+     width: fit-content;
+     margin-left: 1cqw;
+  }
+
+}
+
