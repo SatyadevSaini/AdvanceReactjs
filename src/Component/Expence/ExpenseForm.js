@@ -93,7 +93,7 @@ const MyForm = (props) => {
         </div>
         
         <div>
-        <label> DATE:  </label> <input  className="heighttext"  value={setDateHere} type="date" min="2020-01-01"   max="2023-01-06"
+        <label> DATE:  </label> <input  className="heighttext"  value={setDateHere} type="date" min="2018-01-31"   max="2023-01-31"
         onChange={getDateHere}>
         </input>  
         </div>

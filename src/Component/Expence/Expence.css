@@ -44,6 +44,21 @@
   margin-left: auto;
 }
 
+.filtermain{
+  display: inline-flex;
+}
+
+.filter{
+  text-align: left;
+  margin-left: 4rem;
+}
+
+.filterSelect{
+  font-size: 10vh;
+}
+
+
+
 
 
 @media screen  {

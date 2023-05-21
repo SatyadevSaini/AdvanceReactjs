@@ -13,13 +13,13 @@ import NewExpenceHere from "./Component/Expence/NewExpence";
   },
   {
     id:2,
-    date: new Date(2021, 5, 23),
+    date: new Date(2019, 5, 23),
     title: "ksjk here",
     price: 4560,
   },
   {
     id:3,
-    date: new Date(2021, 9, 23),
+    date: new Date(2019, 9, 23),
     title: "hweujiol here",
     price: 4506,
   },
@@ -31,31 +31,31 @@ import NewExpenceHere from "./Component/Expence/NewExpence";
   },
   {
     id:5,
-    date: new Date(2021, 12, 23),
+    date: new Date(2022, 12, 23),
     title: "tututijhjs here",
     price: 99450,
   },
   {
     id:6,
-    date: new Date(2021, 1, 8),
+    date: new Date(2022, 1, 8),
     title: "tututijhjs here",
     price: 99450,
   },
   {
     id:7,
-    date: new Date(2021, 4, 13),
+    date: new Date(2023, 4, 13),
     title: "tututijhjs here",
     price: 99450,
   },
   {
     id:8,
-    date: new Date(2021, 2, 3),
+    date: new Date(2020, 2, 3),
     title: "Satya here",
     price: 99450,
   },
   {
-    id:8,
-    date: new Date(2021, 2, 3),
+    id:9,
+    date: new Date(2020, 2, 3),
     title: "Satya here",
     price: 99450,
   },
@@ -72,7 +72,7 @@ const  App = () => {
   //***************** Will use State to  Add the item in the list **********************
 
    const [old , newExpenceAdded]  = useState(datas);
-   
+
    const functionForPrintingNewExpence = (data) => {
        
         console.log("App.js"  )

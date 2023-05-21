@@ -12,14 +12,48 @@ const Expence = (dat) => {
     setExpenses("updated");
   } 
 
+  //************************Method for Filtering the Data here********************************** USeState will be used ********
+        const [currentYear , updatedYear]  =     useState('2019')    
+
+  const ChangeTheYear = (e) => {
+    console.log("Filtered Elements here")
+    console.log(e.target.value);  // how to get value from the drop down here....
+    updatedYear(e.target.value); // selected year intp update 
+  }
+
+ const filteredYear =   dat.item.filter( (element)  => {
+      return element.date.getFullYear().toString() === currentYear;  // the year which we will select only fiter those 
+    })
+    
+   
+  
+
   return (
     <Card className="mainClass">
 
-{  dat.item.map(expence => 
-  <div className="expence-item">
+     <div className="filtermain" >
+    <div className="filter">
+    <h2 >FILTERED BY YEAR   </h2> 
+     </div>
+     
+   
 
-        <div>
+<div className="filterSelect">
+<select value={currentYear} onChange={ChangeTheYear} >
+  <option value="2019">2019</option>
+  <option value="2020">2020</option>
+  <option value="2021">2021</option>
+  <option value="2022">2022</option>
+  <option value="2023">2023</option>
+</select>
+</div>
+ </div>
+
+{  filteredYear.map((expence , index) => 
+  <div className="expence-item" key = {expence.id}>
         
+        <div>
+    
          <DateFormat
          date = {expence.date} //its pros here .. 
          ></DateFormat>
@@ -32,9 +66,7 @@ const Expence = (dat) => {
     
       </div>
 
-)}
-
-     
+)}   
     </Card>
   );
 }
