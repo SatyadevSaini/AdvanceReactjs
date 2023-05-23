@@ -73,9 +73,12 @@ const MyForm = (props) => {
        setUpdatedTitile("");
          
     };
+    
 
     return(
-         
+        
+        
+
         <div className="formdiv">
        <div className="title"> <h1>Expence Form</h1></div> 
         <form onSubmit={SubmitFormHandler}>

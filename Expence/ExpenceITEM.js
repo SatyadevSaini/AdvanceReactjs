@@ -6,11 +6,7 @@ import { useState } from 'react';
 
 const Expence = (dat) => {
 
-  const [title , setExpenses] = useState(dat.title);
-  
-  const update = () =>{
-    setExpenses("updated");
-  } 
+ 
 
   //************************Method for Filtering the Data here********************************** USeState will be used ********
         const [currentYear , updatedYear]  =     useState('2018')    
@@ -24,6 +20,21 @@ const Expence = (dat) => {
  const filteredYear =   dat.item.filter( (element)  => {
       return element.date.getFullYear().toString() === currentYear;  // the year which we will select only fiter those 
     })
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
 
 
 
@@ -44,10 +55,7 @@ const Expence = (dat) => {
             </div>
             <div className="expence-item__description">{expence.title}
             <div className="expence-item__price">${expence.price}</div></div>
-            
-              {/* addding eventlistner here  */}
-            <button className="changeTitle" onClick={update}>Update</button>
-        
+          
           </div>
     
     )
