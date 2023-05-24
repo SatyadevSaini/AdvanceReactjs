@@ -1,139 +1,118 @@
-//import logo from "./logo.svg";
-import { useState } from "react";
-import "./App.css";
-import Expence from "./Component/Expence/ExpenceITEM";
-import NewExpenceHere from "./Component/Expence/NewExpence";
+import React, { useState } from 'react';
 
-  const datas = [
+import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from './components/Expenses/Expenses';
+
+const DUMMY_EXPENSES = [
   {
-    id:1,
-    date: new Date(2021, 3, 23),
-    title: "insurance here",
-    price: 450,
+    id: 't1',
+    title: 'Food-Momos',
+    amount: 18.12,
+    date: new Date(2019, 7, 14),
   },
   {
-    id:2,
-    date: new Date(2019, 5, 23),
-    title: "ksjk here",
-    price: 4560,
+    id: 'shj1',
+    title: 'Movie-Green Vally',
+    amount: 194.12,
+    date: new Date(2019, 7, 6),
   },
   {
-    id:3,
-    date: new Date(2019, 9, 23),
-    title: "hweujiol here",
-    price: 4506,
+    id: 'e13',
+    title: 'FaceWash-Haldi',
+    amount: 75.12,
+    date: new Date(2020, 7, 28),
   },
   {
-    id:4,
-    date: new Date(2021, 7, 23),
-    title: "sjkjksjkjik here",
-    price: 45880,
+    id: 'e13',
+    title: 'Tracking',
+    amount: 775.12,
+    date: new Date(2020, 3, 8),
   },
   {
-    id:5,
-    date: new Date(2022, 12, 23),
-    title: "tututijhjs here",
-    price: 99450,
+    id: 'e13',
+    title: 'Jumping',
+    amount: 75.12,
+    date: new Date(2020, 9, 2),
   },
   {
-    id:6,
-    date: new Date(2022, 1, 8),
-    title: "tututijhjs here",
-    price: 99450,
+    id: 'er',
+    title: 'Food-Panner Roti',
+    amount: 100.98,
+    date: new Date(2021, 1, 14),
   },
   {
-    id:7,
-    date: new Date(2023, 4, 13),
-    title: "tututijhjs here",
-    price: 99450,
+    id: 'e1d',
+    title: 'Tracking-Dehradun',
+    amount: 1234.89,
+    date: new Date(2021, 4, 14),
   },
   {
-    id:8,
-    date: new Date(2020, 2, 3),
-    title: "Satya here",
-    price: 99450,
+    id: 'ehj1',
+    title: 'Car-VX29',
+    amount: 150056.8,
+    date: new Date(2022, 7, 14),
   },
   {
-    id:9,
-    date: new Date(2020, 2, 3),
-    title: "Satya here",
-    price: 99450,
+    id: 'e1',
+    title: 'Toilet Paper',
+    amount: 94.12,
+    date: new Date(2022, 7, 14),
+  },
+  {
+    id: 'e31',
+    title: 'Dust Paper',
+    amount: 44.12,
+    date: new Date(2023, 4, 24),
+  },
+  {
+    id: 'e1rr',
+    title: 'Movie Date ',
+    amount: 194.12,
+    date: new Date(2023, 7, 14),
+  },
+  {
+    id: 'e1er',
+    title: 'Gedian',
+    amount: 294.12,
+    date: new Date(2019, 7, 14),
+  },
+  { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+  {
+    id: 'e3',
+    title: 'Car Insurance',
+    amount: 294.67,
+    date: new Date(2021, 2, 28),
+  },
+  {
+    id: 'e4',
+    title: 'New Desk (Wooden)',
+    amount: 450,
+    date: new Date(2021, 5, 12),
   },
 ];
 
-const  App = () => {
+const App = () => {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  // *********IMPORTANT *********************
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
+  };
 
-  // it will remove the element from the array where id=2 
-  // const  newArray  =  data.filter(obj => obj.id !== 2);
-  // console.log(newArray);
-
-  //***************** Will use State to  Add the item in the list **********************
-
-   const [old , newExpenceAdded]  = useState(datas);
-
-   const functionForPrintingNewExpence = (data) => {
-       
-        console.log("App.js"  )
-        console.log(data);
-        console.log(datas)
-
-      //  datas.push(data);
-
-    newExpenceAdded( (prevExpence) => {
-      return [data , ...prevExpence];
-    }  );
-
-   };
-
-    //working properrly we are able to send details able to interchange details..
-   const printMyDetails = (details) => {
-     console.log(details);
-   }
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
 
   return (
-     
     <div>
-     <NewExpenceHere  gotoAppDotJS = {functionForPrintingNewExpence}
-      sendMyDetails = {printMyDetails}
-     />
-
-      {/* {datas.map((item , index) => (
-        <div key={index}> */}
-          <Expence
-          item = {old}
-            // date={item.date}
-            // title={item.title}
-            // price={item.price}
-            // id={item.id}
-          ></Expence>
-        {/* </div> */}
-       {/* ))}
-          */}
-             
-      {/* // <Expence date={data[0].date} title={data[0].title} price={data[0].price}>
-     
-      // </Expence>
-     
-      // <Expence date={data[1].date} title={data[1].title} price={data[1].price}>
-      
-      // </Expence>
-     
-      // <Expence date={data[2].date} title={data[2].title} price={data[2].price}>
-      
-      // </Expence>
-      
-      // <Expence date={data[3].date} title={data[3].title} price={data[3].price}>
-      
-      // </Expence>
-      
-      // <Expence date={data[4].date} title={data[4].title} price={data[4].price}>
-      
-      // </Expence> */}
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
-
